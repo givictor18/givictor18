@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+@keyframes animacao{
+    from{
+        text-shadow: none;
+    }
+    to{
+        text-shadow: 3px 3px 5px black, -3px -3px 5px black;
+    }
+}
+
+header {
+    height: 125px;
+    background-color: #ffb5a7;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.title-nav-container {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    color: #b23a48;
+    font-size: 3rem;
+    animation: animacao 2.0s infinite;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link-item {
+    color: #b23a48;
+    font-weight: bold;
+    transition: text-shadow .5s, transform .5s;
+}
+
+.link-item:hover {
+    text-shadow: 3px 3px 4px black;
+    transform: scale(1.5);
+}
+
+main{
+    background-color: #ffeedd;
+    padding: 10px 0;
+}
+
+.rows{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.cols{
+    display: flex;
+    height: 350px;
+    width: 250px;
+    background-color: #e56b6f;
+    margin: 5px;
+    border-radius: 10%;
+    box-shadow: 3px 3px 6px black;
+    justify-content: center;
+    align-items: center;
+}
+
+.cols img{
+    border-radius: 10%;
+    transition: box-shadow .5s;
+    width: 50%;
+    height: 50%;
+}
+
+.cols img:hover{
+    box-shadow: 3px 3px 4px black;
+
+}
+
+.rodape{
+    display: flex;
+    background-color: #e6beae;
+    height: 130px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-colunas, .logo-rodape{
+    text-align: center;
+    background-color: #e6beae;
+    height: 125px;
+    width: 75px;
+    flex-flow: column;
+    gap: 10px;
+
+}
+
+.menu-links{
+    font-size: 12px;
+}
+
+.logo-rodape img{
+    margin-top: 32px;
+    height: 65px;
+    width: 65px;
+}
+
+.title{
+    text-shadow: 3px 3px 5px black;
+}
+
+@media only screen and (max-width:800px){
+    .rows{
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: column;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:540px){
+    main{
+        flex-flow: column;
+        align-items: center;
+
+    }
+}
+
